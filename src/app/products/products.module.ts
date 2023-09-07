@@ -2,20 +2,22 @@ import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 
 import { ProductsRoutingModule } from './products-routing.module';
-import { NumbersComponent } from './pages/numbers/numbers.component';
 import { BasicsPageComponent } from './pages/basics-page/basics-page.component';
-import { UnCommonPageComponent } from './pages/un-common-page/un-common-page.component';
+import { NumbersPageComponent } from './pages/numbers-page/numbers-page.component';
+import { UncommonPageComponent } from './pages/uncommon-page/uncommon-page.component';
+import { PrimeNgModule } from '../prime-ng/prime-ng.module';
 
 
 @NgModule({
   declarations: [
-    NumbersComponent,
     BasicsPageComponent,
-    UnCommonPageComponent
+    NumbersPageComponent,
+    UncommonPageComponent
   ],
   imports: [
     CommonModule,
-    ProductsRoutingModule
+    PrimeNgModule,
+    ProductsRoutingModule,
   ]
 })
 export class ProductsModule { }

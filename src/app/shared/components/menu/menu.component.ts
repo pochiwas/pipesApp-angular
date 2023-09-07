@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component } from '@angular/core';
 import { MenuItem } from 'primeng/api';
 
 @Component({
@@ -7,9 +7,9 @@ import { MenuItem } from 'primeng/api';
   styles: [
   ]
 })
-export class MenuComponent implements OnInit {
+export class MenuComponent {
 
-   public menuItems: MenuItem[] = [];
+  public menuItems: MenuItem[] = [];
 
     ngOnInit() {
         this.menuItems = [
@@ -17,48 +17,34 @@ export class MenuComponent implements OnInit {
             label: 'Pipes de Angular',
             icon: 'pi pi-desktop',
             items: [
-                {
-                    label: 'Textos y fechas',
-                    icon: 'pi pi-fw pi-align-left',
-                    routerLink:'Basic'
-                },
-                {
-                    label: 'Numeros',
-                    icon: 'pi pi-fw pi-dollar',
-                    routerLink:'Numbers'
-                },
-                {
-                    label: 'No Comunes',
-                    icon: 'pi pi-fw pi-globe',
-                    routerLink:'unCommon'
-                }
+              {
+                label: 'Textos y Fechas',
+                icon: 'pi pi-align-left',
+                routerLink: '/'
+              },
+              {
+                label: 'Números',
+                icon: 'pi pi-dollar',
+                routerLink: 'numbers'
+              },
+              {
+                label: 'No comunes',
+                icon: 'pi pi-globe',
+                routerLink: 'uncommon'
+              },
+
             ]
-        },
-        {
-            label: 'Pipes Personalizados',
-            icon: 'pi pi-fw pi-pencil',
+          },
+          {
+            label: 'Pipes personalizados',
+            icon: 'pi pi-cog',
             items: [
-                {
-                    label: 'Left',
-                    icon: 'pi pi-fw pi-align-left'
-                },
-                {
-                    label: 'Right',
-                    icon: 'pi pi-fw pi-align-right'
-                },
-                {
-                    label: 'Center',
-                    icon: 'pi pi-fw pi-align-center'
-                },
-                {
-                    label: 'Justify',
-                    icon: 'pi pi-fw pi-align-justify'
-                }
+              {
+                label: 'Otro elemento',
+                icon: 'pi pi-cog',
+              }
             ]
-        },
- 
+          }
         ];
     }
-
-
 }
